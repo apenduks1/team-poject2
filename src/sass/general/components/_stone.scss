@@ -1,0 +1,62 @@
+.stone-section{
+    padding: 36px 0 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ 
+}
+
+.stone-title{
+        font-family: "Montserrat Alternates";
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+        width: 195px;
+        height: 20px;
+        margin-bottom: 36px;
+}
+
+.cards-list{
+    display: flex;
+    margin-bottom: 88px;
+    &__item{
+        padding: 0;
+        margin: 0 38px 0 0;
+
+        &:nth-child(3){
+            margin: 0;
+        }
+    }
+}
+
+.cards{
+    background-color: black;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+}
+
+.stone-btn{
+    background-color: black;
+    width: 182px;
+    height: 35px;
+    border-radius: 20px;
+    font-family: "Montserrat Alternates";
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff;
+}
+
+.list-score{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards__svg{
+    width: 40px;
+    height: 40px;
+    fill: white;
+}
+
