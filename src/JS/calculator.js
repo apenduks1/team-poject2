@@ -1,4 +1,3 @@
-console.log(1);
 document.addEventListener('DOMContentLoaded', (event) => {
 
     const number1Input = document.getElementById('number1');
@@ -10,34 +9,41 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const multiplyButton = document.querySelector('.calculator__multiply');
     const divideButton = document.querySelector('.calculator__divide');
     const equalButton = document.querySelector('.calculator__operation_equal');
-    
+
     let number1 = 0;
     let number2 = 0;
     let operation = null;
-    
+
     addButton.addEventListener('click', () => {
         operation = 'add';
     });
-    
+
     subtractButton.addEventListener('click', () => {
         operation = 'subtract';
     });
-    
+
     multiplyButton.addEventListener('click', () => {
         operation = 'multiply';
     });
-    
+
     divideButton.addEventListener('click', () => {
         operation = 'divide';
     });
-    
+
+    function validateNumber(input) {
+        if (isNaN(input)) {
+            return false;
+        }
+        return true;
+    }
+
     equalButton.addEventListener('click', () => {
-        number1 = (number1Input.value);
-        number2 = (number2Input.value);
+        number1 = +number1Input.value;
+        number2 = +number2Input.value;
         console.log(number1)
         console.log(typeof number1);
         let result = 0;
-        
+
         switch (operation) {
             case 'add':
                 result = number1 + number2;
@@ -58,7 +64,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             default:
                 result = 'Виберіть операцію';
         }
-        
+
         resultDisplay.textContent = result;
     });
 });
