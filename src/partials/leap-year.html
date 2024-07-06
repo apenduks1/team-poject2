@@ -1,13 +1,15 @@
 <section class="leap-year">
     <div class="container">
         <div class="leap-year__info">
-            <h4 class="leap-year__main-text">Перевір в який рік ти народився</h4>
+            <h4 class="leap-year__main--text">Перевір в який рік ти народився</h4>
         </div>
-        <div class="leap-year__input">
+        <div class="leap-year__box">
           <label>
-            <input type="text">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" class="leap-year__input" placeholder="Введіть рік народження" id="input">
+            <button class="leap-year__search" onclick="checkLeapYear()"><i class="fa-solid fa-magnifying-glass" style="color: white"></i></button>
           </label>
+          <p class="leap-year__output" id="output">Ви народилися у високосний рік!</p>
+          <p class="leap-year__output--2" id="output2">Ви народилися не у високосний рік!</p>
         </div>
     </div>
 </section>
