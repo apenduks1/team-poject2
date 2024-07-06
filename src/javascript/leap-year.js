@@ -11,12 +11,11 @@ function checkLeapYear() {
     const input = document.getElementById('input');
     const output = document.getElementById('output');
     const output2 = document.getElementById('output2');
+    const check = document.getElementById("check");
 
 
-    if (input) {
-      const year = parseInt(input, 10);
-      if (isLeapYear(year)) {
-        output.style.opacity = 1;
-      }
-    }
-}
+  check.addEventListener("click", function() {
+    const year = parseInt(input.value, 10);
+
+    if (!isNaN(year)) {
+      if (isLeapYear(year))
