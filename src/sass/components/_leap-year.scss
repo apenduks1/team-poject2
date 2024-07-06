@@ -47,17 +47,16 @@
     font-weight: 400;
     font-size: 12px;
     text-align: right;
-    opacity: 0;
     color: $dark-green;
   }
-
-  &__output--2 {
-    font-family: Montserrat, sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    text-align: right;
-    display: none;
-    color: $red;
-  }
+  //
+  //&__output--2 {
+  //  font-family: Montserrat, sans-serif;
+  //  font-weight: 400;
+  //  font-size: 12px;
+  //  text-align: right;
+  //  display: none;
+  //  color: $red;
+  //}
 }
 

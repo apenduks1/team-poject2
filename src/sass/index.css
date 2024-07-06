@@ -40,16 +40,7 @@
   font-weight: 400;
   font-size: 12px;
   text-align: right;
-  opacity: 0;
   color: #039900;
-}
-.leap-year__output--2 {
-  font-family: Montserrat, sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  text-align: right;
-  display: none;
-  color: #900;
 }
 
 /*# sourceMappingURL=index.css.map */
