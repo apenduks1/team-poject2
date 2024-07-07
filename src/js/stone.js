@@ -1,19 +1,13 @@
 let userScore = 0;
 let computerScore = 0;
-const userScore_parag = document.querySelector('.score-you')
-const computerScore_parag = document.querySelector('.score-computer')
-const result = document.querySelector('.result')
-const stone = document.querySelector('.cards--stone')
-const scissors = document.querySelector('.cards--scissors')
-const paper = document.querySelector('.cards--paper')
-const stoneButton = document.querySelector('.stone-btn')
-
-stoneButton.addEventListener('click', () => { 
-    stoneButton.style.backgroundColor = '#6F6F6F';
-    setTimeout(() => {
-    stoneButton.style.backgroundColor = 'black';
-    }, 200);
-})
+let userChoice = null;
+const userScore_parag = document.querySelector('.score-you');
+const computerScore_parag = document.querySelector('.score-computer');
+const result = document.querySelector('.result');
+const stone = document.querySelector('.cards--stone');
+const scissors = document.querySelector('.cards--scissors');
+const paper = document.querySelector('.cards--paper');
+const stoneButton = document.querySelector('.stone-btn');
 
 const getComputerChoice = () => {
   const choices = ["stone", "scissors", "paper"];
@@ -22,7 +16,7 @@ const getComputerChoice = () => {
 };
 
 const highlightComputerChoice = (choice) => {
-  [stone, scissors, paper].forEach((element) => element.classList.remove('highlight'))
+  [stone, scissors, paper].forEach((element) => element.classList.remove('highlight'));
 
   switch (choice) {
     case "stone":
@@ -35,79 +29,79 @@ const highlightComputerChoice = (choice) => {
       paper.classList.add('highlight');
       break;
   }
-}
+};
 
 const wins = () => {
-  console.log("Ви виграли раунд!");
   userScore++;
   userScore_parag.innerHTML = userScore;
-  computerScore_parag.innerHTML = computerScore;
   result.innerHTML = "Ви виграли раунд!";
   result.style.color = '#039900';
-}
+};
 
 const lose = () => {
-  console.log("Ви програли раунд!");
   computerScore++;
-  userScore_parag.innerHTML = userScore;
   computerScore_parag.innerHTML = computerScore;
   result.innerHTML = "Ви програли раунд!";
   result.style.color = 'red';
-}
+};
 
 const draw = () => {
-  console.log("Нічья!");
   result.innerHTML = "Нічия!";
   result.style.color = 'DeepSkyBlue';
-}
+};
 
-const choice = (userChoice) => {
+const playGame = () => {
+  if (!userChoice) {
+    alert("Будь ласка, виберіть варіант!");
+    return;
+  }
+
   const computerChoice = getComputerChoice();
-  highlightComputerChoice(computerChoice); 
+  highlightComputerChoice(computerChoice);
 
   switch (userChoice + computerChoice) {
     case "scissorspaper":
     case "paperstone":
     case "stonescissors":
-      wins(userChoice, computerChoice);
+      wins();
       break;
     case "paperscissors":
     case "scissorsstone":
     case "stonepaper":
-      lose(userChoice, computerChoice);
+      lose();
       break;
     case "paperpaper":
     case "scissorsscissors":
     case "stonestone":
-      draw(userChoice, computerChoice);   
+      draw();
       break;
   }
-}
 
-const main = () => {
-  stone.addEventListener('click', () => {
-    choice("stone");
-    stone.style.backgroundColor = '#6F6F6F';
-    setTimeout(() => {
-      stone.style.backgroundColor = 'black';
-    }, 200);
-  });
-
-  scissors.addEventListener('click', () => {
-      choice("scissors");
-      scissors.style.backgroundColor = '#6F6F6F';
-    setTimeout(() => {
-      scissors.style.backgroundColor = 'black';
-    }, 200);
-  });
-
-  paper.addEventListener('click', () => {
-      choice("paper");
-      paper.style.backgroundColor = '#6F6F6F';
-    setTimeout(() => {
-      paper.style.backgroundColor = 'black';
-    }, 200);
-  });
+  userChoice = null;
 };
 
-main();
+stoneButton.addEventListener('click', playGame);
+
+stone.addEventListener('click', () => {
+  userChoice = "stone";
+  stone.style.backgroundColor = '#6F6F6F';
+  setTimeout(() => {
+    stone.style.backgroundColor = 'black';
+  }, 200);
+});
+
+scissors.addEventListener('click', () => {
+  userChoice = "scissors";
+  scissors.style.backgroundColor = '#6F6F6F';
+  setTimeout(() => {
+    scissors.style.backgroundColor = 'black';
+  }, 200);
+});
+
+paper.addEventListener('click', () => {
+  userChoice = "paper";
+  paper.style.backgroundColor = '#6F6F6F';
+  setTimeout(() => {
+    paper.style.backgroundColor = 'black';
+  }, 200);
+});
