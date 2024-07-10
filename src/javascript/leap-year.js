@@ -8,17 +8,19 @@ document.addEventListener('DOMContentLoaded', function() {
   const checkButton = document.getElementById('check');
 
   checkButton.addEventListener('click', function() {
-    const yearString = input.value.trim(); // Отримуємо введене значення року як рядок
-    const year = parseInt(yearString, 10); // Перетворюємо рядок на ціле число
+    const yearString = input.value.trim();
+    const year = parseInt(yearString, 10);
 
-    if (!isNaN(year)) { // Перевіряємо, чи введений рік є числом
+    if (!isNaN(year)) {
       if (isLeapYear(year)) {
-        output.textContent = `Ви народилися у високосний рік!`; // Виводимо текст, якщо рік високосний
+        output.textContent = `Ви народилися у високосний рік!`;
+        output.style.color = '#039900'
       } else {
-        output.textContent = `Ви народилися не у високосний рік!`; // Виводимо текст, якщо рік не високосний
+        output.textContent = `Ви народилися не у високосний рік!`;
+        output.style.color = '#900'
       }
     } else {
-      output.textContent = `Будь ласка, введіть коректний рік!`; // Виводимо текст, якщо введений рік не є числом
+      output.textContent = `Будь ласка, введіть коректний рік!`;
     }
   });
 });
