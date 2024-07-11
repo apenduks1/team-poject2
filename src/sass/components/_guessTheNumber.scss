@@ -26,6 +26,7 @@
     font-weight: 400;
     font-size: 12px;
     
+    
   }
   &__btn--input {
     width: 35px;
@@ -34,15 +35,13 @@
     border-radius: 0 20px 20px 0;
     position: relative; 
     right: 41px;
-    top: 12px;
+  
    
   }
-  &__result{
-    text-align: end;
-    margin: 0;
-    top: 0;
-  }
+  
   &__info {
    height: 35px   ;
+   margin: 0;
+   padding: 0;
   }
 }
