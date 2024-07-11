@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.dino-title{
+    font-family: "Montserrat Alternates";
+    font-weight: 400;
+    font-size: 16px;
+    color: $black;
+}
+
+.dino-section{
+    margin-top: 33px;
+    border: 1px solid black;
+    // width: 720px;
+    height: 297px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.dino-game{
+    margin-top: 36px;
+    border: 1px solid black;
+    height: 172px;
+    width: 617px;
+    margin-bottom: 55px;
+}
+
+.dino{
+    background-image: url("../images/dinosaur/dino.png");
+    background-size: cover;
+    width: 54px;
+    height: 56px;
+}
