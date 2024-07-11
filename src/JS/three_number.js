@@ -7,7 +7,7 @@ function checkInputs() {
     const num1Value = +num1.value
     const num2Value = +num2.value
     const num3Value = +num3.value
-    console.log(num1Value);
+
     const maxNum = Math.max(num1Value, num2Value, num3Value);
     document.getElementById('result').textContent = `Найбільше число, яке ви ввели - ${maxNum}`;
     /*     if (num1 !== "" && num2 !== "" && num3 !== "") {
@@ -19,6 +19,6 @@ function checkInputs() {
         } */
 
 }
-num1.addEventLisener('input', checkInputs)
-num2.addEventLisener('input', checkInputs)
-num3.addEventLisener('input', checkInputs)
+num1.addEventListener('input', checkInputs)
+num2.addEventListener('input', checkInputs)
+num3.addEventListener('input', checkInputs)
