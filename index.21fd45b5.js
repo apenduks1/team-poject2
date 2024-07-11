@@ -1,0 +1,2 @@
+console.log(1);var num1=document.getElementById("number1"),num2=document.getElementById("number2"),num3=document.getElementById("number3");function checkInputs(){var e=+num1.value,n=+num2.value,t=+num3.value;console.log(e);var u=Math.max(e,n,t);document.getElementById("result").textContent="Найбільше число, яке ви ввели - ".concat(u)}num1.addEventLisener("input",checkInputs),num2.addEventLisener("input",checkInputs),num3.addEventLisener("input",checkInputs);
+//# sourceMappingURL=index.21fd45b5.js.map
