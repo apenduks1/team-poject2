@@ -6,7 +6,7 @@
     height: 17px;
     background: $grey;
     color: $greyForText;
-    font-family: font-familyx;
+    font-family: $font-family;
     font-weight: 400;
     font-size: 12px;
  
@@ -30,12 +30,13 @@
   }
   &__info{
     display: flex;
-    justify-content:space-between;
+    justify-content:center;
+    gap: 33px ;
+    align-items: center;
+    margin-top: 36px;
+    margin-right: 170px;
   }
-  &__paragraph{
-    padding: 0;
-    margin: 0;
-  }
+ 
   &__paragraph{
     padding: 0;
     margin: 0;
