@@ -1,19 +1,17 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    var modal = document.getElementById('footer_modals');
-    var btn = document.getElementById('footer__btn"');
-    var span = document.getElementsByClassName('footer_modal__close')[0];
+    const modal = document.getElementById('footerModals');
+    const btn = document.getElementById('footerBtn"');
+    const span = document.getElementById('footer_modal__cross');
 
-    btn.onclick = function() {
-        modal.style.display = 'block';
-    }
+    btn.addEventListener('click', (e) => {
+        modal.style.opacity = '1';
+    })
 
-    span.onclick = function() {
-        modal.style.display = 'none';
-    }
+    span.addEventListener('click', (e) => {
+        modal.style.opacity = '0';
+    })
 
-    window.onclick = function(event) {
+    window.addEventListener('click', (e) => {
         if (event.target == modal) {
             modal.style.display = 'none';
         }
-    }
-});
+    }); 

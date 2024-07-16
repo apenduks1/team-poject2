@@ -1,4 +1,5 @@
 .footer_modal {
+  opacity: 0;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -59,4 +60,5 @@
   background-color: rgba(0, 0, 0, 0.5);
   display: block;
   z-index: 1000;
+  opacity: 0;
 }
