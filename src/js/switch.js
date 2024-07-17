@@ -13,6 +13,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
   
-  // Ініціалізувати початковий стан
   document.body.classList.add('light-mode');
 });
