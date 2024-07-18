@@ -1,8 +1,8 @@
     const modal = document.getElementById('footerModals');
-    const btn = document.getElementById('footerBtn"');
+    const btnFooter = document.getElementById('footerBtn"');
     const span = document.getElementById('footer_modal__cross');
 
-    btn.addEventListener('click', (e) => {
+    btnFooter.addEventListener('click', (e) => {
         modal.style.opacity = '1';
     })
 
