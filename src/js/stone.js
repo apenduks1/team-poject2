@@ -84,24 +84,20 @@ stoneButton.addEventListener('click', playGame);
 
 stone.addEventListener('click', () => {
   userChoice = "stone";
-  stone.style.backgroundColor = '#6F6F6F';
-  setTimeout(() => {
-    stone.style.backgroundColor = 'black';
-  }, 200);
+  highlightUserChoice(stone);
 });
 
 scissors.addEventListener('click', () => {
   userChoice = "scissors";
-  scissors.style.backgroundColor = '#6F6F6F';
-  setTimeout(() => {
-    scissors.style.backgroundColor = 'black';
-  }, 200);
+  highlightUserChoice(scissors);
 });
 
 paper.addEventListener('click', () => {
   userChoice = "paper";
-  paper.style.backgroundColor = '#6F6F6F';
-  setTimeout(() => {
-    paper.style.backgroundColor = 'black';
-  }, 200);
+  highlightUserChoice(paper);
 });
+
+const highlightUserChoice = (choiceElement) => {
+  [stone, scissors, paper].forEach((element) => element.classList.remove('user-highlight'));
+  choiceElement.classList.add('user-highlight');
+};
