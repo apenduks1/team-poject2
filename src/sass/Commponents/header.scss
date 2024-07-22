@@ -1,5 +1,4 @@
 .header {
-  background-color: $white;
   display: inline-block;
   width: 100%;
   z-index: 20000;
@@ -16,16 +15,16 @@
     margin: 7px 0px 3px 0px;
   }
   &__menu {
+    margin-top: 1px;
     transition: all 1s ease;
     margin-left: -40px;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
-    border-bottom: 1px solid #000;
+    border-left: 1px solid $black;
+    border-right: 1px solid $black;
+    border-bottom: 1px solid $black;
     position: absolute;
     top: 100%;
     left: 0;
     width: 160px;
-    background-color: $white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 20px 20px;
     z-index: 1000;
@@ -78,7 +77,6 @@
     font-weight: 400;
     line-height: 14.63px;
     text-align: left;
-    color: $black;
   }
 
   &__list {
@@ -119,7 +117,7 @@
 .switch-handle {
   width: 18px;
   height: 18px;
-  background-color: #fff;
+  background-color: $white;
   border-radius: 50%;
   position: absolute;
   left: 1px;
@@ -140,7 +138,7 @@
 
 .switch.on .switch-handle {
   left: 21px;
-  background-color: #000;
+  background-color: $black;
 }
 
 .switch.on .icon-off {
@@ -151,14 +149,14 @@
   display: none;
 }
 
-body.light-mode {
-  background-color: white;
-  color: black;
+.light-mode {
+  background-color: $white;
+  color: $black;
 }
 
-body.dark-mode {
-  background-color: black;
-  color: white;
+.dark-mode {
+  background-color: rgb(111, 111, 111);
+  color: $white;
 }
 
 .is__hidden {

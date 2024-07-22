@@ -33,3 +33,11 @@
   html {
     scroll-behavior: smooth;
   }
+  body.light-mode {
+    background-color: white;
+    color: black;
+  }
+  body.dark-mode {
+    background-color: rgb(111, 111, 111);
+    color: white;
+  }  

@@ -1,23 +1,18 @@
 .scientist {
-    padding: 36px 0;
-  
-    .inner-container {
-      @include flex($direction: column, $wrap: wrap);
-    }
-  
-    &__title {
-      margin-bottom: 36px;
-    }
+  padding: 36px 0;
+
+  &__title {
+    margin-bottom: 36px;
   }
-  
-  .scientist-list {
+
+  &__list {
     @include flex($wrap: wrap);
     row-gap: 59px;
     column-gap: 36px;
     margin-bottom: 36px;
     max-width: 577px;
-  
-    &__item {
+
+    &-item {
       @include flex($direction: column);
       width: 100px;
       height: 100px;
@@ -26,34 +21,39 @@
     }
   }
   
-  .facts-list {
-    @include flex($wrap: wrap);
-    row-gap: 36px;
-    column-gap: 20px;
-    width: 100%;
-    max-width: 770px;
-  
-    &__btn {
-      padding: 10px 20px;
-      border-radius: 20px;
-      background-color: getColor('background-text-primary');
-      box-shadow: 3px 3px 0px 0px getColor('box-shadow');
-      cursor: pointer;
-      color: getColor('secondary-text');
-      @include text();
-    }
+  .inner-container {
+    @include flex($direction: column, $wrap: wrap);
   }
-  
-  #name,
-  #birthYear,
-  .scientist-list__item,
-  #deathYear {
-    color: getColor('background-text-primary');
-    @include text(11px, 14px);
+}
+.fact__list {
+  @include flex($wrap: wrap);
+  column-gap: 36px;
+  row-gap: 20px;
+  width: 100%;
+  max-width: 770px;
+
+  &-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #000;
+    box-shadow: 3px 3px 0px 0px getColor('box-shadow');
+    cursor: pointer;
+    color: #fff;
+    @include text();
   }
-  
-  .whole-name,
-  .date {
-    display: flex;
-    gap: 3px;
-  }
+}
+
+#name,
+#birthYear,
+.scientist__list-item,
+#deathYear {
+  color: getColor('background-text-primary');
+  @include text(11px, 14px);
+}
+
+.whole-name,
+.date {
+  color: $black;
+  display: flex;
+  gap: 3px;
+}
