@@ -18,13 +18,17 @@ let run;
 let points = 0;
 let highScore = localStorage.getItem('highScore') || 0;
 
+// це для того щоб в нас динозаврик не пригав коли гра закінчилась
+let isGameOver = false;
+
 function updateScoreDisplay() {
     scorePoints.textContent = points.toString().padStart(5, '0');
     scoreHigh.textContent = 'HI ' + highScore.toString().padStart(5, '0');
 }
 
 function jump() {
-    if (isJumping) return;
+    if (isJumping || isGameOver) return;
+
     isJumping = true;
     dino.style.display = 'block';
     dinoRun1.style.display = 'none';
@@ -37,11 +41,13 @@ function jump() {
     }, 700);
 
     if (!hasJumped) {
-        cactus.classList.add('move');
         hasJumped = true;
-        startGroundLoop();
-        startGame();
-        startRunningAnimation();
+        setTimeout(() => {
+            cactus.classList.add('move');
+            startGroundLoop();
+            startGame();
+            startRunningAnimation();
+        }, 1000); // Додаємо затримку в 1 секунду
     }
 }
 
@@ -69,15 +75,23 @@ function startGroundLoop() {
 function startGame() {
     game = setInterval(() => {
         const dinoRect = dino.getBoundingClientRect();
+        const dinoRun1Rect = dinoRun1.getBoundingClientRect();
+        const dinoRun2Rect = dinoRun2.getBoundingClientRect();
         const cactusRect = cactus.getBoundingClientRect();
 
-        if (isCollision(dinoRect, cactusRect)) {
+        console.log('Dino:', dinoRect);
+        console.log('Cactus:', cactusRect);
+
+        if (isCollision(dinoRect, cactusRect) ||
+            isCollision(dinoRun1Rect, cactusRect) ||
+            isCollision(dinoRun2Rect, cactusRect)) {
+            console.log('Collision detected!');
             gameOver();
         } else {
             points++;
             updateScoreDisplay();
         }
-    }, 100);
+    }, 50);
 }
 
 function startRunningAnimation() {
@@ -93,16 +107,30 @@ function startRunningAnimation() {
 }
 
 function isCollision(dinoRect, cactusRect) {
-    return !(dinoRect.right < cactusRect.left ||
-        dinoRect.left > cactusRect.right ||
-        dinoRect.bottom < cactusRect.top ||
-        dinoRect.top > cactusRect.bottom);
-}
+    const dinoHitbox = {
+        left: dinoRect.left + 5,
+        right: dinoRect.right - 5,
+        top: dinoRect.top + 5,
+        bottom: dinoRect.bottom - 5
+    };
+    const cactusHitbox = {
+        left: cactusRect.left + 5,
+        right: cactusRect.right - 5,
+        top: cactusRect.top + 5,
+        bottom: cactusRect.bottom - 5
+    };
 
+    return !(dinoHitbox.right < cactusHitbox.left ||
+        dinoHitbox.left > cactusHitbox.right ||
+        dinoHitbox.bottom < cactusHitbox.top ||
+        dinoHitbox.top > cactusHitbox.bottom);
+}
 function gameOver() {
+    isGameOver = true;
     clearInterval(game);
     clearInterval(ground);
     clearInterval(run);
+
     cactus.classList.remove('move');
     ground1.style.left = '0%';
     ground2.style.left = '100%';
@@ -112,6 +140,7 @@ function gameOver() {
     dino.style.display = 'none';
     dinoLose.style.display = 'flex';
 
+
     if (points > highScore) {
         highScore = points;
         localStorage.setItem('highScore', highScore);
@@ -119,6 +148,7 @@ function gameOver() {
 }
 
 function resetGame() {
+    isGameOver = false;
     points = 0;
     updateScoreDisplay();
     dinoGameOver.style.display = 'none';
@@ -128,15 +158,19 @@ function resetGame() {
     cactus.style.left = '100%';
     dino.style.display = 'flex';
     dinoLose.style.display = 'none';
-    jump(); 
+    jump();
 }
 
 document.addEventListener('keydown', (event) => {
-    if (event.code === 'Space') {
+    if (event.code === 'Space' && !isGameOver) {
         jump();
     }
 });
 
-document.querySelector('.dino-game').addEventListener('click', jump);
+document.querySelector('.dino-game').addEventListener('click', (event) => {
+    if (!isGameOver) {
+        jump();
+    }
+});
 dinoRestart.addEventListener('click', resetGame);
 updateScoreDisplay();
