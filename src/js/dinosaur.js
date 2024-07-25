@@ -47,7 +47,7 @@ function jump() {
             startGroundLoop();
             startGame();
             startRunningAnimation();
-        }, 1000); // Додаємо затримку в 1 секунду
+        }, 200);
     }
 }
 
@@ -132,6 +132,7 @@ function gameOver() {
     clearInterval(run);
 
     cactus.classList.remove('move');
+    // cactus.style.left = "617px";
     ground1.style.left = '0%';
     ground2.style.left = '100%';
     dinoGameOver.style.display = 'block';
