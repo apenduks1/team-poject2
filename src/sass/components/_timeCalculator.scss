@@ -1,18 +1,18 @@
 .timeCalculator {
   &__input {
     border-radius: 20px;
-    padding: 10px 45px 10px 10px;
+    padding: 18px 38  px 18px 10px;
     width: 150px;
     height: 17px;
     background: $grey;
     color: $greyForText;
-    font-family: $font-family;
+    font-family: "Montserrat Alternates";
     font-weight: 400;
     font-size: 12px;
  
   }
   &__title {
-    font-family: $font-family;
+    font-family: "Montserrat Alternates";
     font-weight: 400;
     font-size: 16px;
     color: #000;
@@ -34,7 +34,7 @@
     gap: 33px ;
     align-items: center;
     margin-top: 36px;
-    margin-right: 170px;
+    margin-right: 113px;
   }
  
   &__paragraph{
