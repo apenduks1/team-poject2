@@ -1,4 +1,3 @@
-console.log(1);
 const num1 = document.getElementById('number1');
 const num2 = document.getElementById('number2');
 const num3 = document.getElementById('number3');
@@ -19,6 +18,7 @@ function checkInputs() {
         } */
 
 }
-num1.addEventListener('input', checkInputs)
-num2.addEventListener('input', checkInputs)
-num3.addEventListener('input', checkInputs)
+num1.addEventListener('input', checkInputs);
+num2.addEventListener('input', checkInputs);
+num3.addEventListener('input', checkInputs);
+

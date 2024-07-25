@@ -1,0 +1,45 @@
+.timeCalculator {
+  margin-top: 36px;
+  margin-bottom: 36px;
+  &__input {
+    border-radius: 20px;
+    padding: 18px 38px 18px 10px;
+    width: 150px;
+    height: 17px;
+    background: $grey;
+    color: $greyForText;
+    font-family: "Montserrat Alternates";
+    font-weight: 400;
+    font-size: 12px;
+ 
+  }
+  &__title {
+    font-family: "Montserrat Alternates";
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+  }
+  &__btn--input {
+    width: 35px;
+    height: 37px;
+    background-color: $black;
+    border-radius: 0 20px 20px 0;
+    position: relative;
+    right: 41px;
+  top: 1;
+    
+  }
+  &__info{
+    display: flex;
+    justify-content:center;
+    gap: 33px ;
+    align-items: center;
+    margin-top: 36px;
+    margin-right: 113px;
+  }
+ 
+  &__paragraph{
+    padding: 0;
+    margin: 0;
+  } }
