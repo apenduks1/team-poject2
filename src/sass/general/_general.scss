@@ -1,0 +1,33 @@
+.container {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1090px;
+  
+    padding: 0 230px;
+  }
+  
+  $font-family: 'Montserrat Alternates', sans-serif;
+  $second-family: 'Inter', sans-serif;
+  $third-family: 'Sacramento', sans-serif;
+      
+  
+  br{
+    color:$black ;
+    width: 536px;
+    height: 0.01px;
+    margin-left: 452px;
+  }
+  
+  i {
+    color: $white;
+   
+  }
+  input[type="number"] {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    }
