@@ -84,8 +84,8 @@ p {
 
 .list-score {
     position: absolute;
-    top: 92px;
-    right: 392px;
+    top: 480px;
+    right: 920px;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -117,4 +117,9 @@ p {
 .highlight {
     border: 2px solid yellow;
     box-shadow: 0 0 10px yellow;
+}
+
+.user-highlight {
+    border: 2px solid rgb(170, 170, 255);
+    box-shadow: 0 0 10px rgb(170, 170, 255);
 }

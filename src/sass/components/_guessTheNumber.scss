@@ -1,7 +1,7 @@
 .guessTheNumber {
-  height: 163px;
+  margin-bottom: 36px;
   &__title {
-    font-family: $font-family;
+    font-family: "Montserrat Alternates";
     font-weight: 400;
     font-size: 16px;
     color: #000;
@@ -15,6 +15,7 @@
     position: absolute;
   }
   &__input {
+    
     box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
     width: 150px;
     height: 35px;
@@ -22,9 +23,19 @@
     background-color: $grey;
     color: $greyForText;
     text-align:center ;  
-    font-family: $font-family;
+    font-family: "Montserrat Alternates";
     font-weight: 400;
     font-size: 12px;
+    border: none;
+padding-right: 35px;
+      :placeholder {
+        position: relative;
+        top: 5%;
+        left: -25%;
+        margin-left: 3px;
+      }
+   
+    
     
   }
   &__btn--input {
@@ -35,14 +46,30 @@
     position: relative; 
     right: 41px;
 
+  
+   
   }
   &__result{
-    text-align: end;
+  display: flex;
     margin: 0;
     top: 0;
-    color:$green ;
+
+    padding: 0;
+    text-align: center;
+    align-items: center;
+  width: 362px;
+  
+
   }
+  
   &__info {
    height: 35px   ;
+   padding-right: 0;
+   display: flex;
+   justify-content: center;
+   gap: 200px;  
+   margin-top: 36px;
+   margin: 0;
+   padding: 0;
   }
 }
