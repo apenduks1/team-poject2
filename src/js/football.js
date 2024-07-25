@@ -21,20 +21,17 @@ ball.onmousedown = function (event) {
   ball.style.zIndex = 1000;
   document.body.append(ball);
 
-  // Центруємо м’яч за координатами (pageX, pageY)
   function moveAt(pageX, pageY) {
     ball.style.left = pageX - ball.offsetWidth / 2 + 'px';
     ball.style.top = pageY - ball.offsetHeight / 2 + 'px';
   }
 
-  // Переміщення м’яча на mousemove
   function onMouseMove(event) {
     moveAt(event.pageX, event.pageY);
   }
 
   document.addEventListener('mousemove', onMouseMove);
 
-  // Завершення перенесення
   ball.onmouseup = function () {
     document.removeEventListener('mousemove', onMouseMove);
     ball.onmouseup = null;
