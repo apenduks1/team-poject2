@@ -4,7 +4,7 @@
   z-index: 20000;
   top: 0;
   height: 80px;
-/*   &__cursor {
+  /*   &__cursor {
     cursor: default;
   } */
   &__dropdown {
@@ -35,7 +35,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
+      
       &:last-child {
         border-bottom: none;
         border-radius: 0 0 20px 20px;
@@ -46,7 +46,7 @@
       }
     }
   }
-  
+
   &__left {
     display: inline-flex;
     margin-top: 30px;
@@ -54,18 +54,18 @@
   &__right {
     display: inline-flex;
   }
-  
+
   &__nav {
     display: flex;
     justify-content: space-between;
     gap: 50px;
     margin-top: 32px;
   }
-  
+
   &__logo {
     margin: 21px 81px 0px 0px;
   }
-  
+
   &__block {
     display: flex;
     justify-content: space-between;
@@ -117,7 +117,7 @@
 .switch-handle {
   width: 18px;
   height: 18px;
-  background-color: $white;
+  background-color: white; /* начальный цвет белый */
   border-radius: 50%;
   position: absolute;
   left: 1px;
@@ -138,7 +138,7 @@
 
 .switch.on .switch-handle {
   left: 21px;
-  background-color: $black;
+  background-color: black; /* цвет черный при включении */
 }
 
 .switch.on .icon-off {
@@ -149,17 +149,41 @@
   display: none;
 }
 
+.light-mode .header__arrow .arrow-path {
+  stroke: black;
+}
+
+.dark-mode .header__arrow .arrow-path {
+  stroke: white;
+}
+
 .light-mode {
-  background-color: $white;
-  color: $black;
+  background-color: white;
+  color: black;
 }
 
 .dark-mode {
   background-color: rgb(111, 111, 111);
-  color: $white;
+  color: white;
 }
 
 .is__hidden {
   opacity: 0;
+  pointer-events: none;
 }
 
+.logo-stroke {
+  stroke: black;
+}
+
+.logo-fill {
+  fill: black;
+}
+
+.dark-mode .logo-stroke {
+  stroke: white;
+}
+
+.dark-mode .logo-fill {
+  fill: white;
+}
