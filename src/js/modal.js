@@ -1,16 +1,16 @@
-document.addEventListener('DOMContentLoaded', () => {
-    var modal = document.getElementById('myModal');
-    var closeModalBtn = document.getElementById('closeModalBtn');
-    var saveModalBtn = document.getElementById('saveModalBtn');
-    var userInput = document.getElementById('userInput');
-    var userNameDisplay = document.getElementById('userName');
+// document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('myModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const saveModalBtn = document.getElementById('saveModalBtn');
+    const userInput = document.getElementById('userInput');
+    const userNameDisplay = document.getElementById('userName');
     
     closeModalBtn.onclick = function() {
         modal.style.display = 'none';
     }
 
     saveModalBtn.onclick = function() {
-        var name = userInput.value.trim();
+        const name = userInput.value.trim();
         if (name === "") {
             name = "User";
         }
@@ -23,4 +23,4 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.style.display = 'none';
         }
     }
-});
+// });
