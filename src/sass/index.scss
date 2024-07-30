@@ -1,7 +1,17 @@
 @import './utils/color';
-@import './utils/mixin.scss';
-@import './utils/general.scss';
-@import './Commponents/modal.scss';
-@import './Commponents/scientist.scss';
-@import './Commponents/header.scss';
-
+@import './utils/general';
+@import './utils/mixin';
+@import './components/calculator';
+@import './components/dinosaur';
+@import './components/football';
+@import './components/footer';
+@import './components/footer_modal';
+@import './components/guessTheNumber';
+@import './components/leap-year';
+@import './components/ourTeam';
+@import './components/stone';
+@import './components/three_numbers';
+@import './components/timeCalculator';
+@import './components/header';
+@import './components/modal';
+@import './components/scientist';
