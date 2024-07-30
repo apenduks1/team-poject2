@@ -1,0 +1,189 @@
+.header {
+  display: inline-block;
+  width: 100%;
+  z-index: 20000;
+  top: 0;
+  height: 80px;
+  /*   &__cursor {
+    cursor: default;
+  } */
+  &__dropdown {
+    display: flex;
+    gap: 8px;
+  }
+  &__arrow {
+    margin: 7px 0px 3px 0px;
+  }
+  &__menu {
+    margin-top: 1px;
+    transition: all 1s ease;
+    margin-left: -40px;
+    border-left: 1px solid $black;
+    border-right: 1px solid $black;
+    border-bottom: 1px solid $black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 160px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 20px 20px;
+    z-index: 1000;
+
+    &-item {
+      padding: 10px 49px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      &:last-child {
+        border-bottom: none;
+        border-radius: 0 0 20px 20px;
+      }
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+
+  &__left {
+    display: inline-flex;
+    margin-top: 30px;
+  }
+  &__right {
+    display: inline-flex;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 32px;
+  }
+
+  &__logo {
+    margin: 21px 81px 0px 0px;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: Montserrat Alternates;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.63px;
+    text-align: left;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    gap: 50px;
+  }
+
+  &__item {
+    position: relative;
+
+    &__title {
+      cursor: pointer;
+    }
+
+    &__arrow {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.switch {
+  background: #7a7a7a;
+  border-radius: 11px;
+  width: 40px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 51px;
+}
+
+.switch-handle {
+  width: 18px;
+  height: 18px;
+  background-color: white; /* начальный цвет белый */
+  border-radius: 50%;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.switch .icon {
+  display: none;
+}
+
+.switch .icon-on {
+  display: block;
+}
+
+.switch.on .switch-handle {
+  left: 21px;
+  background-color: black; /* цвет черный при включении */
+}
+
+.switch.on .icon-off {
+  display: block;
+}
+
+.switch.on .icon-on {
+  display: none;
+}
+
+.light-mode .header__arrow .arrow-path {
+  stroke: black;
+}
+
+.dark-mode .header__arrow .arrow-path {
+  stroke: white;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: rgb(111, 111, 111);
+  color: white;
+}
+
+.is__hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo-stroke {
+  stroke: black;
+}
+
+.logo-fill {
+  fill: black;
+}
+
+.dark-mode .logo-stroke {
+  stroke: white;
+}
+
+.dark-mode .logo-fill {
+  fill: white;
+}
