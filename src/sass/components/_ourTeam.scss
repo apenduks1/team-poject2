@@ -2,6 +2,12 @@
     height: 180px;
     margin-top: 36px;
 }
+.ourTeam__img{
+   
+    height: 150px;
+    max-width: 150px;
+    border-radius: 20px;
+}
 .slider {
     position: relative;
     max-width: 800px;
@@ -17,8 +23,14 @@
 .slide {
     min-width: 100%;
     box-sizing: border-box;
-}
 
+}
+.ourTeam_title{
+    font-family:"Montserrat Alternates" ;
+font-weight: 400;
+font-size: 14px;
+color: #000;
+}
 .slide img {
     width: 100%;
 }

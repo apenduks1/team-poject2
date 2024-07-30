@@ -1,5 +1,4 @@
 .footer_modal {
-  opacity: 0;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -10,6 +9,7 @@
   background-color: $white;
   width: 463px;
   height: 245px;
+
   &__block {
     display: inline;
     &-text {

@@ -1,17 +1,18 @@
     const modal = document.getElementById('footerModals');
-    const btnFooter = document.getElementById('footerBtn"');
-    const span = document.getElementById('footer_modal__cross');
+    const btnFooter = document.getElementById('footerBtn');
+    const span = document.querySelector('.footer_modal__cross');
 
     btnFooter.addEventListener('click', (e) => {
-        modal.style.opacity = '1';
+      modal.classList.remove("is_hidden")
     })
 
     span.addEventListener('click', (e) => {
-        modal.style.opacity = '0';
+        modal.classList.add("is_hidden")
     })
-
+    
     window.addEventListener('click', (e) => {
         if (event.target == modal) {
-            modal.style.display = 'none';
+            modal.classList.add("is_hidden")
+
         }
     }); 
