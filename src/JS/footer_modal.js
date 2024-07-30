@@ -7,11 +7,14 @@
     btnFooter.addEventListener('click', () => {
         console.log('click');
         modalFooter.classList.remove("is__hidden")
+        document.body.style.overflow = 'hidden'
     })
 
-    // span.addEventListener('click', (e) => {
-    //     modal.classList.add("is__hidden")
-    // })
+    span.addEventListener('click', (e) => {
+        modal.classList.add("is__hidden")
+        document.body.style.overflow = 'visible'
+
+    })
     
     // window.addEventListener('click', (e) => {
     //     if (event.target == modal) {
