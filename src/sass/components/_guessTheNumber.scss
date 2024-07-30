@@ -28,7 +28,7 @@
     font-size: 12px;
     border: none;
 padding-right: 35px;
-      :placeholder {
+      &::placeholder {
         position: relative;
         top: 5%;
         left: -25%;
