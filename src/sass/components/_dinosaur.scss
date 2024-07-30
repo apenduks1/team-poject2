@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.dino-title{
+    font-family: "Montserrat Alternates";
+    font-weight: 400;
+    font-size: 16px;
+    color: $black;
+}
+
+
+
+.dino-section{
+    margin-top: 33px;
+    height: 297px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.dino-game{
+    position : relative;
+    margin-top: 36px;
+    border: none;
+    height: 190px;
+    width: 617px;
+    margin-bottom: 55px;
+    overflow: hidden;
+}
+
+.dino-game__ground {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 14px;
+    width: 100%;
+    background-image: url('../images/dinosaur/track.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+
+#ground1 {
+    left: 0;
+}
+
+#ground2 {
+    left: 100%;
+}
+
+.dino-game__ground.move {
+    animation: groundMove 2.5s linear infinite;
+}
+
+@keyframes groundMove {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+.dino-game__dino{
+    position: absolute;
+    bottom: 5px;
+    left: 10%;
+    width: 54px;
+    height: 56px; 
+}
+
+.dino-lose{
+    display: none;
+}
+
+.dino-game__dino.jump {
+    animation: jump 0.7s ease;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        bottom: 100px;
+    }
+    50% {
+        bottom: 100px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+.dino-game__cactus {
+    position: absolute;
+    bottom: 3px;
+    left: 96%;
+    width: 24px;
+    height: 46px;
+}
+
+.dino-game__cactus.move {
+    animation: move 2.5s linear infinite;
+}
+
+@keyframes move {
+    0% {
+       left: 617px;
+    }
+    100% {
+        left: -40px;
+    }
+}
+
+.dino-game__restart{
+    position: absolute;
+    bottom: 30%;
+    left: 46%;
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+
+.dino-game__over{
+    position: absolute;
+    bottom: 52%;
+    left: 32%;
+    width: 220px;
+    height: 28px;
+    display: none;
+}
+
+.dino-container__points{
+    font-family: "Montserrat Alternates";
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.dino-run1, .dino-run2{
+    display: none;
+}
