@@ -175,3 +175,8 @@ document.querySelector('.dino-game').addEventListener('click', (event) => {
 });
 dinoRestart.addEventListener('click', resetGame);
 updateScoreDisplay();
+document.addEventListener('keydown', function(event) {
+    if (event.code === 'Space') {
+        event.preventDefault(); // Забороняє стандартну поведінку (прокручування)
+    }
+});

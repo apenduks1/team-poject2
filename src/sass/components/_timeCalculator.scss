@@ -13,11 +13,15 @@
     font-size: 12px;
  
   }
+  &__container{
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
   &__title {
     font-family: "Montserrat Alternates";
     font-weight: 400;
     font-size: 16px;
-    color: #000;
+
     text-align: center;
   }
   &__btn--input {

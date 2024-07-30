@@ -25,3 +25,12 @@ function isLeapYear(year) {
       }
     });
   });
+  document.getElementById('input').addEventListener('input', function() {
+    const input = this;
+    const errorMessage = document.getElementById('error-message');
+    if (input.value > 2024 || input.value < 1) {
+        errorMessage.style.display = 'block';
+    } else {
+        errorMessage.style.display = 'none';
+    }
+});

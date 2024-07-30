@@ -1,7 +1,6 @@
 .footer {
-  width: 1440px;
-  height: 220px;
-  background: $white;
+height: 220px;
+
   padding: 61px 0 59px 0;
   font-family: var(--font-family);
   &__img_logo {
@@ -37,7 +36,7 @@
   }
   &__p {
     font-weight: 400;
-    font-size: 6px;
+    font-size: 10px;
     color: $black;
     margin-top: 18px;
   }
