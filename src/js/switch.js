@@ -10,9 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (isOn) {
       body.classList.remove('light-mode');
       body.classList.add('dark-mode');
+      body.classList.add("dark-mode_hover")
     } else {
       body.classList.remove('dark-mode');
       body.classList.add('light-mode');
+      body.classList.remove("dark-mode_hover")
     }
 
     logoStroke.forEach(stroke => {

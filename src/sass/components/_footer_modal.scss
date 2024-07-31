@@ -10,6 +10,7 @@
   width: 463px;
   height: 245px;
 
+
   &__block {
     display: inline;
     &-text {
@@ -20,6 +21,8 @@
   &__close {
     position: absolute;
     margin: 30px 30px 0px 269px;
+    background: none;
+    border: none;
   }
   &__title {
     font-weight: 400;
@@ -32,11 +35,11 @@
     &-right {
       &-top {
         position: absolute;
-        margin: 46px 0 0 200px;
+        margin: -34px 42px 0px 242px;
       }
-      &-bottom {
+      &-botom {
         position: absolute;
-        margin: -46px 0 0 235px;
+        margin: 47px 0px 0px 213px;
       }
     }
     &-left {
@@ -44,9 +47,10 @@
         position: absolute;
         margin: -34px 0px 0px -92px;
       }
-      &-bottom {
+      &-botom {
         position: absolute;
         margin: 47px 0 0 -50px;
+        border: none;
       }
     }
   }

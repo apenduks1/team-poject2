@@ -1,37 +1,90 @@
 <section class="ourTeam all" data-type="Ознайомчий">
-    <hr>
+    <hr class="hr" />
+    <dir class="ourTeam__title">
+      <h2 class="ourTeam__title-text">Наша команда</h2>
+    </dir>
     <div class="slider">
-        <div class="slides">
-            <div class="slide">
-                <img class="ourTeam__img" src="./images/Kostya.png" alt="Kostya">
-                <h2>Костя</h2>
-                <p>   PM/14/header/scientist/Our Team</p>
-            </div>
-            <div  class="slide">
-                <img class="ourTeam__img" src="./images/Vyacheslav.png" alt="Image 2">
-                <h2>В'ячеслав</h2>
-                <p>PM/14/header/scientist/Our Team</p>
-            </div>
-            <div class="slide">
-                <img class="ourTeam__img" src="./images/Adriana.png" alt="Image 3">
-                <h2>Адріана</h2>
-                <p> 15/Google dinosaur/Stone - knives - paper</p>
-            </div>
-            <div class="slide">
-                <img class="ourTeam__img" src="./images/Mykhailo.png" alt="Image 4">
-                <h2 class="ourTeam_title">Михайло</h2>
-                <p>QA/&/Footer/Three numbers/Calculator</p>
-            </div>
-            <div class="slide">
-                <img  class="ourTeam__img" src="./images/petruxa.png" alt="Image 5">
-                <h2>Ростик</h2>
-                <p>15/Football/Leap year</p>
-            </div>
+      <div class="slides">
+        <div class="slide">
+          <div class="ourTeam__block">
+            <img class="ourTeam__img" src="./images/Kostya.png" alt="Kostya" />
+            <h2 class="ourTeam__block-title">Костя</h2>
+            <p class="ourTeam__block-text"> TL/13/Our Team/Guess the number/Hour calculator</p>
+          </div>
         </div>
-        <button style="width: 50; height: 100;" class="prev" onclick="changeSlide(-1)"></button>
-        <button style="width: 50; height: 100;"  class="next" onclick="changeSlide(1)">&#10095;</button>
-  
-</body>
-</html>
-
+        <div class="slide">
+          <div class="ourTeam__block">
+            <img
+              class="ourTeam__img"
+              src="./images/Vyacheslav.png"
+              alt="Vyacheslav"
+            />
+            <h2 class="ourTeam__block-title">В'ячеслав</h2>
+            <p class="ourTeam__block-text">PM/14/header/scientist/Our Team</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="ourTeam__block">
+            <img class="ourTeam__img" src="./images/Adriana.png" alt="Adriana" />
+            <h2 class="ourTeam__block-title">Адріана</h2>
+            <p class="ourTeam__block-text">
+              15/Google dinosaur/Stone - knives - paper
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="ourTeam__block">
+            <img
+              class="ourTeam__img"
+              src="./images/Mykhailo.png"
+              alt="Mykhailo"
+            />
+            <h2 class="ourTeam__block-title">Михайло</h2>
+            <p class="ourTeam__block-text">
+              QA/&/Footer/Three numbers/Calculator
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="ourTeam__block">
+            <img
+              class="ourTeam__img"
+              src="./images/petruxa.png"
+              alt="Image 5"
+            />
+            <h2 class="ourTeam__block-title">Ростик</h2>
+            <p class="ourTeam__block-text">15/Football/Leap year</p>
+          </div>
+        </div>
+      </div>
+      <div class="ourTeam__menu-hr">
+        <hr class="ourTeam__hr active-hr" />
+        <hr class="ourTeam__hr" />
+        <hr class="ourTeam__hr" />
+        <hr class="ourTeam__hr" />
+        <hr class="ourTeam__hr" />
+      </div>
+      <button class="prev" onclick="changeSlide(-1)">
+        <svg
+          width="52"
+          height="102"
+          viewBox="0 0 52 102"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M51 1L1 51L51 101" stroke="black" />
+        </svg>
+      </button>
+      <button class="next" onclick="changeSlide(1)">
+        <svg
+          width="52"
+          height="102"
+          viewBox="0 0 52 102"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M1 1L51 51L1 101" stroke="black" />
+        </svg>
+      </button>
+    </div>
   </section>

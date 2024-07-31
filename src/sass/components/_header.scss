@@ -14,6 +14,7 @@
   &__arrow {
     margin: 7px 0px 3px 0px;
   }
+  
   &__menu {
     margin-top: 1px;
     transition: all 1s ease;
@@ -44,6 +45,7 @@
       &:hover {
         background-color: #f0f0f0;
       }
+      
     }
   }
 
@@ -160,6 +162,9 @@
 .light-mode {
   background-color: white;
   color: black;
+}
+.dark-mode_hover .header__menu-item:hover {
+  background-color: #272626;
 }
 
 .dark-mode {
