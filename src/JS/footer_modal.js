@@ -1,24 +1,30 @@
-    const modalFooter = document.querySelector('.modal-js');
-    const btnFooter = document.getElementById('footerBtn');
-    const span = document.getElementById('.footer_modal__cross');
-    console.log(btnFooter);
-    console.log('modal',modalFooter);
+const modalFooter = document.querySelector('.modal-js');
+const btnFooter = document.getElementById('footerBtn');
+const spanFooter = document.querySelector('.footer_modal__close');
+const inputFooter = document.querySelector('.footer__email_type');
+console.log(spanFooter);
+console.log('modal', modalFooter);
 
-    btnFooter.addEventListener('click', () => {
-        console.log('click');
+btnFooter.addEventListener('click', () => {
+    if (inputFooter.value !== '' && inputFooter.value.includes('@')) {
         modalFooter.classList.remove("is__hidden")
         document.body.style.overflow = 'hidden'
-    })
+    } else {
+        alert('Будь ласка, введіть коректну електронну пошту')
+    }
+})
 
-    span.addEventListener('click', (e) => {
-        modal.classList.add("is__hidden")
-        document.body.style.overflow = 'visible'
+spanFooter.addEventListener('click', () => {
+    console.log('click');
 
-    })
-    
-    // window.addEventListener('click', (e) => {
-    //     if (event.target == modal) {
-    //         modal.classList.add("is__hidden")
+    modalFooter.classList.add("is__hidden")
+    document.body.style.overflow = 'visible'
 
-    //     }
-    // }); 
+})
+
+window.addEventListener('click', (event) => {
+    if (event.target == modalFooter) {
+        modalFooter.classList.add("is__hidden")
+
+    }
+}); 

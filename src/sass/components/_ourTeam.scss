@@ -1,13 +1,73 @@
-.ourTeam{
-    height: 180px;
+.ourTeam {
+    height: 338px;
     margin-top: 36px;
 }
-.ourTeam__img{
-   
+
+.ourTeam__img {
+    margin-top: 36px;
     height: 150px;
     max-width: 150px;
     border-radius: 20px;
 }
+
+.ourTeam__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ourTeam__block-title {
+    margin-top: 20px;
+    font-family: "Montserrat Alternates";
+    font-weight: 400;
+    font-size: 14px;
+    color: inherit;
+}
+
+.ourTeam__block-text {
+    margin-top: 20px;
+    font-family: "Montserrat Alternates";
+    font-weight: 400;
+    font-size: 12px;
+    color: inherit;
+}
+
+.ourTeam__title {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+}
+
+.ourTeam__title-text {
+    font-family: "Montserrat Alternates";
+    font-weight: 400;
+    font-size: 14px;
+    color: inherit;
+}
+
+.ourTeam__menu-hr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    margin-top: 24px;
+}
+
+.ourTeam__hr {
+    border-radius: 3px;
+    width: 18px;
+    height: 3px;
+    background: #d9d9d9;
+    margin: 0;
+}
+
+.active-hr {
+    border-radius: 3px;
+    width: 30px;
+    height: 3px;
+    background: #797979;
+}
+
 .slider {
     position: relative;
     max-width: 800px;
@@ -21,21 +81,18 @@
 }
 
 .slide {
+    display: flex;
+    justify-content: center;
     min-width: 100%;
     box-sizing: border-box;
+}
 
-}
-.ourTeam_title{
-    font-family:"Montserrat Alternates" ;
-font-weight: 400;
-font-size: 14px;
-color: #000;
-}
 .slide img {
     width: 100%;
 }
 
-.prev, .next {
+.prev,
+.next {
     position: absolute;
     top: 50%;
     width: auto;
@@ -47,6 +104,9 @@ color: #000;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
 .prev {
@@ -57,8 +117,4 @@ color: #000;
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
 }
