@@ -10,8 +10,8 @@
     max-width: 768px;
     padding: 0 32px;
   }
-  @media screen and (min-width: 1090px) {
-    max-width: 1280px;
+  @media screen and (min-width: 1280px) {
+    max-width: 1090px;
     padding: 0 16px;
   }
 }
@@ -38,6 +38,10 @@ input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+input{
+  outline: none;
+  border: none;
+}
 hr{
   height: 1;
   color: $black;
@@ -59,23 +63,7 @@ main{
   background-repeat:no-repeat ;
   background-size: cover;
 }
-.container { 
-  width: 100%; 
-  padding: 0 20px; 
-  margin: 0 auto; 
-  position: relative;
-  @media screen and (min-width: 480px) { 
-    max-width: 480px; 
-  } 
-  @media screen and (min-width: 768px) { 
-    max-width: 768px; 
-    padding: 0 32px; 
-  } 
-  @media screen and (min-width: 1280px) { 
-    max-width: 1280px; 
-    padding: 0 16px; 
-  } 
-}
+
 * {
   box-sizing: border-box;
   margin: 0;

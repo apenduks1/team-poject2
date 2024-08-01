@@ -36,6 +36,7 @@ const wins = () => {
   userScore_parag.innerHTML = userScore; 
   result.innerHTML = "Ви виграли раунд!"; 
   result.style.color = '#039900'; 
+  result.style.opacity = '1';
 }; 
  
 const lose = () => { 
@@ -43,11 +44,15 @@ const lose = () => {
   computerScore_parag.innerHTML = computerScore; 
   result.innerHTML = "Ви програли раунд!"; 
   result.style.color = 'red'; 
+  result.style.opacity = '1';
+
 }; 
  
 const draw = () => { 
   result.innerHTML = "Нічия!"; 
   result.style.color = 'DeepSkyBlue'; 
+  result.style.opacity = '1';
+
 }; 
  
 const playGame = () => { 

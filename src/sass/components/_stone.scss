@@ -48,12 +48,15 @@ p {
 
 .cards-list {
     display: flex;
-    margin: 0 0 36px 497px; 
+    margin: 0 auto;
     list-style: none;
     padding: 0;
+    justify-content: center;
+
     &__item {
         padding: 0;
         margin: 0 38px 0 0;
+
         &:nth-child(3) {
             margin: 0;
         }
@@ -67,30 +70,37 @@ p {
     height: 60px;
     border-radius: 20px;
     cursor: pointer;
+
     &:hover {
         -webkit-box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.2);
         -moz-box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.2);
     }
+
     &__img {
         padding: 10px;
     }
 }
 
 .cards-container {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
 }
 
 
 .list-score {
- 
+    position: absolute;
+    right: -40px;
+    top: -50px;
     list-style: none;
     display: flex;
     flex-direction: column;
     padding: 0;
     margin-right: 300px;
-    
+
+    &__item {
+        display: flex;
+        gap: 3px;
+    }
 }
 
 .result {
@@ -98,25 +108,26 @@ p {
     font-weight: 400;
     font-size: 12px;
     color: #039900;
-    margin: 35px;
+    margin: 35px;opacity: 0;
     text-align: center;
 }
 
 .score-computer {
-    position: absolute;
-    top: 21.5px;
-    right: -3px;
+    // position: absolute;
+    // top: 21.5px;
+    // right: -3px;
 }
 
 .score-you {
-    position: absolute;
-    bottom: 0px;
-    left: 30px;
+    // position: absolute;
+    // bottom: 0px;
+    // left: 30px;
 }
 
 .highlight {
     border: 2px solid yellow;
     box-shadow: 0 0 10px yellow;
+   
 }
 
 .user-highlight {
