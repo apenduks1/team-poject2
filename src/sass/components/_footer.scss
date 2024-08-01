@@ -3,23 +3,34 @@
   height: 220px;
   background: $white;
   padding: 61px 0 59px 0;
-  font-family: var(--font-family);
+  font-family: 'Montserrat Alternates', sans-serif;
   &__img_logo {
     margin-left: 175px;
+    width: 114px;
+    height: 47px;
+    margin-top: 28px;
   }
   &__container {
     justify-content: center;
-    display: flex;
-    gap: 38px;
+    display: flex;  
   }
   &__item {
     font-weight: 400;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 170%;
     color: $black;
+    display: flex;
+    >a {
+      color: $black;
+      :hover {
+        color: green;
+      }
+    }
   }
-  &__social {
+  &__socials {
     margin-left: 185px;
+    width: 208px;
+    height: 101px;
   }
   &__email_btn_p {
     margin-left: 187px;
@@ -59,5 +70,8 @@
     padding: 0;
     gap: 10px;
     margin-top: 10px;
+  }
+  &__email_btn_p {
+    margin-top: 30px;
   }
 }
