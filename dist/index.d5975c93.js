@@ -1,0 +1,2 @@
+"use strict";var input=document.getElementsByClassName("timeCalculator__input")[0],timeCalcutaorResult=document.getElementsByClassName("timeCalculator__paragraph")[0],button=document.getElementsByClassName("timeCalculator__btn--input")[0];button.addEventListener("click",(function(){var t=parseInt(input.value),a=Math.floor(t/1440);t%=1440;var e=Math.floor(t/60),n=(t%=60)%60,l="".concat(a,"дн ").concat(e,":").concat(n);timeCalcutaorResult.textContent=l}));
+//# sourceMappingURL=index.d5975c93.js.map

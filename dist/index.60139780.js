@@ -1,0 +1,2 @@
+var modal=document.getElementById("myModal"),closeModalBtn=document.getElementById("closeModalBtn"),saveModalBtn=document.getElementById("saveModalBtn"),userInput=document.getElementById("userInput"),userNameDisplay=document.getElementById("userName");closeModalBtn.onclick=function(){modal.style.display="none"},saveModalBtn.onclick=function(){var e=userInput.value.trim();""===e&&(e="User"),userNameDisplay.textContent=e,modal.style.display="none"},window.onclick=function(e){e.target==modal&&(modal.style.display="none")};
+//# sourceMappingURL=index.60139780.js.map

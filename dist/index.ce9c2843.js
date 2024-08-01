@@ -1,0 +1,2 @@
+"use strict";var currentSlide=0;function changeSlide(e){var r=document.querySelectorAll(".slide"),t=document.querySelectorAll(".ourTeam__hr");t.forEach((function(e){return e.classList.remove("active-hr")})),t[currentSlide=(currentSlide+e+r.length)%r.length].classList.add("active-hr"),document.querySelector(".slides").style.transform="translateX(-".concat(100*currentSlide,"%)")}setInterval((function(){changeSlide(1)}),5e3);
+//# sourceMappingURL=index.ce9c2843.js.map

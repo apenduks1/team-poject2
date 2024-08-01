@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",(function(){var t=document.getElementById("field"),e=document.getElementById("ball");t&&e?t.addEventListener("click",(function(n){var l=t.getBoundingClientRect(),o=e.getBoundingClientRect().width,i={top:n.clientY-l.top-o/2,left:n.clientX-l.left-o/2},a=t.clientWidth-o,c=t.clientHeight-o;e.style.transform="translate(".concat(Math.min(a,Math.max(0,i.left)),"px, ").concat(Math.min(c,Math.max(0,i.top)),"px)")})):console.error("Field or ball element not found")}));
+//# sourceMappingURL=index.0d9b54ac.js.map
