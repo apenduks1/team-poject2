@@ -1,18 +1,15 @@
-"use strict"
-const GTNbtn = document.getElementsByClassName('guessTheNumber__btn--input');
-const randomGuess = document.getElementsByClassName('guessTheNumber__input');
-const guessTheNumberResult = document.getElementsByClassName('guessTheNumber__result');
+"use strict";
+const GTNbtn = document.querySelector('.guessTheNumber__btn--input');
+const randomGuess = document.querySelector('.guessTheNumber__input');
+const guessTheNumberResult = document.querySelector('.guessTheNumber__result');
 
-GTNbtn.addEventListener('click', function()  {
+GTNbtn.addEventListener('click', function() {
     const randomNumber = Math.floor(Math.random() * 10) + 1;
     if (+randomGuess.value === randomNumber) {
-      guessTheNumberResult.textContent =
-        'Вітаю, ви вгадали число! ${randomNumber}';
-      guessTheNumberResult.style.color = 'green';
+        guessTheNumberResult.textContent = `Вітаю, ви вгадали число! ${randomNumber}`;
+        guessTheNumberResult.style.color = 'green';
     } else {
-      guessTheNumberResult.textContent =
-        'Ви програли, комп’ютер загадав ${randomNumber}. (Це число від 1 до 10)';
-      guessTheNumberResult.style.color = 'red';
+        guessTheNumberResult.textContent = `Ви програли, комп’ютер загадав ${randomNumber}. (Це число від 1 до 10)`;
+        guessTheNumberResult.style.color = 'red';
     }
-  });
-  
+});
