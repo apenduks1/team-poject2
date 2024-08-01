@@ -1,7 +1,7 @@
 "use strict"
-const GTNbtn = document.getElementById('GTNbtn');
-const randomGuess = document.getElementById('randomGuess');
-const guessTheNumberResult = document.getElementById('guessTheNumberResult');
+const GTNbtn = document.getElementsByClassName('guessTheNumber__btn--input');
+const randomGuess = document.getElementsByClassName('guessTheNumber__input');
+const guessTheNumberResult = document.getElementsByClassName('guessTheNumber__result');
 
 GTNbtn.addEventListener('click', function()  {
     const randomNumber = Math.floor(Math.random() * 10) + 1;

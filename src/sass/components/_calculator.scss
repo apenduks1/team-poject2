@@ -59,6 +59,11 @@
       .calculator__operation--icon {
         color: $black;
       }
+      
+    }
+    &:active{
+      background-color: $grey;
+      border-color: $black;
     }
   }
 

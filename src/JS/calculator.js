@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const number1Input = document.getElementById('number1');
     const number2Input = document.getElementById('number2');
     const resultDisplay = document.querySelector('.calculator__result');
-
+    
     const addButton = document.querySelector('.calculator__plus');
     const subtractButton = document.querySelector('.calculator__subtract');
     const multiplyButton = document.querySelector('.calculator__multiply');
